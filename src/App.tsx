@@ -10,11 +10,13 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Menu />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Menu />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }
