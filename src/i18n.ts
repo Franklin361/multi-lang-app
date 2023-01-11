@@ -1,41 +1,17 @@
 import i18n from 'i18next';
+import i18nBackend from "i18next-http-backend";
 import { initReactI18next } from 'react-i18next';
-import { getCurrentLang } from './lib/getCurrentLang';
+
+const getCurrentHost = import.meta.env.MODE === 'development' ? 'http://localhost:5173' : 'https://multi-lang-app-react.netlify.app'
 
 i18n
+    .use(i18nBackend)
     .use(initReactI18next)
     .init({
-        debug: true,
-        fallbackLng: getCurrentLang(),
-        interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
-        },
-        // language resources
-        resources: {
-            en: {
-                translation: {
-                    title: 'Multi-language app',
-                    label: "Select another language!",
-                    about: 'About',
-                    home: 'Home'
-                }
-            },
-            es: {
-                translation: {
-                    title: 'Aplicación en varios idiomas',
-                    label: "Selecciona otro lenguaje!",
-                    about: 'Sobre mí',
-                    home: 'Inicio'
-                }
-            },
-            it: {
-                translation: {
-                    title: 'Applicazione multilingue',
-                    label: "Selezionare un'altra lingua ",
-                    about: 'Su di me',
-                    home: 'Casa'
-                }
-            },
+        fallbackLng: 'en',
+        lng: 'en',
+        backend: {
+            loadPath: `${getCurrentHost}/i18n/{{lng}}.json`,
         }
     });
 
