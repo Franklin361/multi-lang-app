@@ -2,5 +2,6 @@
     "title": "Applicazione multilingue",
     "label": "Selezionare un'altra lingua",
     "about": "Su di me",
-    "home": "Casa"
+    "home": "Casa",
+    "user": "Mi chiamo: {{name}}"
 }

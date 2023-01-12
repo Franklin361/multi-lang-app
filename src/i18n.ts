@@ -10,6 +10,9 @@ i18n
     .init({
         fallbackLng: 'en',
         lng: 'en',
+        interpolation: {
+            escapeValue: false
+        },
         backend: {
             loadPath: `${getCurrentHost}/i18n/{{lng}}.json`,
         }
