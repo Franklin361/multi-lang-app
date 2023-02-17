@@ -48,9 +48,9 @@ Nowadays, creating an app that supports multiple languages is becoming more and 
 
 ### Here's the link to the tutorial in case you'd like to take a look at it! eyes 👀
 
-- 🇲🇽 🔗 
+- 🇲🇽 🔗 https://dev.to/franklin030601/construyendo-una-app-multi-lenguaje-con-react-44n2
 
-- 🇺🇲 🔗 
+- 🇺🇲 🔗 https://dev.to/franklin030601/building-a-multi-language-app-with-react-js-2och
 
 
 &nbsp;
